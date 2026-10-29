@@ -1,0 +1,1200 @@
+
+/* TEST: Verify the Order Summary selector */
+
+aside.checkout-summary {
+    background:
+        linear-gradient(
+            rgba(255, 248, 236, 0.75),
+            rgba(255, 248, 236, 0.75)
+        ),
+        url("../images/waiting.png")
+        center / cover no-repeat !important;
+
+    border-radius: 18px !important;
+    overflow: hidden;
+}
+
+aside.checkout-summary > .checkout-total {
+    background: transparent !important;
+}
+
+
+/* LUDO background for Order Summary box */
+
+.checkout-summary {
+    background-color: #fff8ec !important;
+    background-image:
+        linear-gradient(
+            rgba(255, 248, 236, 0.55),
+            rgba(255, 248, 236, 0.55)
+        ),
+        url("../images/waiting.png") !important;
+
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    border-radius: 18px !important;
+    overflow: hidden;
+}
+
+
+/* LUDO background for Delivery Address box */
+.checkout-address {
+    background-image:
+        linear-gradient(
+            rgba(255, 248, 236, 0.78),
+            rgba(255, 248, 236, 0.78)
+        ),
+        url("../images/Ludo Food Delivery Adventure (1).png") !important;
+
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    border-radius: 18px;
+}
+
+/* Fix: cover the full checkout page background */
+body {
+    background-image:
+        linear-gradient(
+            rgba(255, 248, 236, 0.40),
+            rgba(255, 248, 236, 0.40)
+        ),
+        url("../images/ludo-background.png") !important;
+
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+}
+
+/* Let the page background show through the checkout area */
+.checkout-page {
+    background: transparent !important;
+    min-height: 100vh;
+}
+
+/* Preserve readable checkout cards */
+.checkout-page .cart-item,
+.checkout-page .order-summary,
+.checkout-page .delivery-address,
+.checkout-page .checkout-card {
+    background-color: rgba(255, 255, 255, 0.94);
+}
+
+/* LUDO Checkout Page Background */
+/*.checkout-page {
+    background-image:
+        linear-gradient(
+            rgba(255, 248, 236, 0.45),
+            rgba(255, 248, 236, 0.45)
+        ),
+        url("../images/ludo-background.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: calc(100vh - 80px);
+}/*
+
+/* LUDO background across the entire checkout area */
+/*.checkout-page {
+    background-image:
+        linear-gradient(
+            rgba(255, 248, 236, 0.45),
+            rgba(255, 248, 236, 0.45)
+        ),
+        url("../images/ludo-background.png") !important;
+
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding-bottom: 50px;
+}/*
+
+/* =========================================
+
+   LUDO CHECKOUT PAGE
+
+========================================= */
+
+* {
+
+    box-sizing: border-box;
+
+}
+
+.checkout-page {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    padding: 45px 0 70px;
+
+    /*background: #f7f8fa;*/
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: #222;
+
+}
+
+/* HEADER */
+
+.checkout-header {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 0 auto 35px;
+
+    text-align: center;
+
+}
+
+.checkout-header h1 {
+
+    margin: 0 0 10px;
+
+    font-size: 34px;
+
+    font-weight: 800;
+
+}
+
+.checkout-header h1 span {
+
+    color: #ff5200;
+
+}
+
+.checkout-header p {
+
+    margin: 0;
+
+    color: #777;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+}
+
+/* MAIN LAYOUT */
+
+.checkout-form {
+
+    width: 100%;
+
+    margin: 0;
+
+}
+
+.checkout-container {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) 360px;
+
+    gap: 28px;
+
+    align-items: start;
+
+}
+
+.checkout-items {
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+}
+
+/* SECTION TITLE */
+
+.checkout-section-title {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 4px;
+
+}
+
+.checkout-section-title h2 {
+
+    margin: 0;
+
+    font-size: 21px;
+
+    font-weight: 800;
+
+}
+
+.checkout-section-title span {
+
+    color: #777;
+
+    font-size: 13px;
+
+}
+
+/* FOOD ITEMS */
+
+.checkout-item {
+
+    display: grid;
+
+    grid-template-columns: 90px minmax(0, 1fr) auto;
+
+    align-items: center;
+
+    gap: 17px;
+
+    padding: 16px;
+
+    background: #fff;
+
+    border: 1px solid #ededed;
+
+    border-radius: 14px;
+
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+}
+
+.checkout-item:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 7px 22px rgba(0, 0, 0, 0.07);
+
+}
+
+.checkout-image-wrapper,
+
+.checkout-image {
+
+    width: 90px;
+
+    height: 80px;
+
+}
+
+.checkout-image {
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    background: #eee;
+
+}
+
+.checkout-item-details {
+
+    min-width: 0;
+
+}
+
+.checkout-item-details h3 {
+
+    margin: 0 0 7px;
+
+    font-size: 16px;
+
+    line-height: 1.4;
+
+    overflow-wrap: anywhere;
+
+}
+
+.checkout-item-details p {
+
+    margin: 0;
+
+    color: #777;
+
+    font-size: 13px;
+
+}
+
+.checkout-item-price {
+
+    color: #ff5200;
+
+    font-size: 17px;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+
+}
+
+/* DELIVERY ADDRESS CARD */
+
+.checkout-address {
+
+    width: 100%;
+
+    padding: 28px;
+
+    background: #fff;
+
+    border: 1px solid #ededed;
+
+    border-radius: 16px;
+
+    box-shadow: 0 5px 22px rgba(0, 0, 0, 0.05);
+
+}
+
+.checkout-address h2,
+
+.payment-section h2 {
+
+    margin: 0 0 22px;
+
+    color: #222;
+
+    font-size: 20px;
+
+    font-weight: 800;
+
+}
+
+/* ADDRESS AND PHONE FIELDS */
+
+.checkout-form-group {
+
+    margin-bottom: 20px;
+
+}
+
+.checkout-form-group label {
+
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #333;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+}
+
+.checkout-form-group input,
+
+.checkout-form-group textarea {
+
+    display: block;
+
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid #dfe1e5;
+
+    border-radius: 10px;
+
+    background: #fafafa;
+
+    color: #222;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: border-color 0.2s ease, box-shadow 0.2s ease,
+
+                background 0.2s ease;
+
+}
+
+.checkout-form-group input {
+
+    min-height: 46px;
+
+}
+
+.checkout-form-group textarea {
+
+    min-height: 115px;
+
+    resize: vertical;
+
+    line-height: 1.6;
+
+}
+
+.checkout-form-group input:focus,
+
+.checkout-form-group textarea:focus {
+
+    background: #fff;
+
+    border-color: #ff5200;
+
+    box-shadow: 0 0 0 3px rgba(255, 82, 0, 0.1);
+
+}
+
+.checkout-form-group input::placeholder,
+
+.checkout-form-group textarea::placeholder {
+
+    color: #999;
+
+}
+
+/* PAYMENT SECTION */
+
+.payment-section {
+
+    margin-top: 30px;
+
+}
+
+.payment-section h2 {
+
+    margin-bottom: 16px;
+
+}
+
+.payment-option {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    width: 100%;
+
+    margin-bottom: 12px;
+
+    padding: 17px;
+
+    background: #fff;
+
+    border: 1px solid #e5e5e5;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease, border-color 0.2s ease;
+
+}
+
+.payment-option:hover {
+
+    background: #fff8f4;
+
+    border-color: #ffb18e;
+
+}
+
+.payment-option input[type="radio"] {
+
+    width: 18px;
+
+    height: 18px;
+
+    margin: 0;
+
+    flex-shrink: 0;
+
+    accent-color: #ff5200;
+
+    cursor: pointer;
+
+}
+
+.payment-option span {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+}
+
+.payment-option strong {
+
+    color: #222;
+
+    font-size: 14px;
+
+}
+
+.payment-option small {
+
+    color: #777;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+}
+
+/* ORDER SUMMARY */
+
+.checkout-summary {
+
+    position: sticky;
+
+    top: 95px;
+
+    min-width: 0;
+
+}
+
+.checkout-total {
+
+    padding: 26px;
+
+    background: #fff;
+
+    border: 1px solid #ededed;
+
+    border-radius: 16px;
+
+    box-shadow: 0 5px 22px rgba(0, 0, 0, 0.05);
+
+}
+
+.checkout-total h2 {
+
+    margin: 0 0 23px;
+
+    font-size: 20px;
+
+    font-weight: 800;
+
+}
+
+.checkout-total-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 17px;
+
+}
+
+.checkout-total-row span:first-child {
+
+    color: #666;
+
+    font-size: 14px;
+
+}
+
+.checkout-total-row span:last-child {
+
+    color: #333;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+}
+
+.checkout-total-row .free {
+
+    color: #22963b;
+
+}
+
+.checkout-divider {
+
+    width: 100%;
+
+    height: 1px;
+
+    margin: 20px 0;
+
+    background: #eee;
+
+}
+
+.checkout-grand-total {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+.checkout-grand-total span {
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+}
+
+.checkout-grand-total strong {
+
+    color: #ff5200;
+
+    font-size: 23px;
+
+    font-weight: 800;
+
+}
+
+/* CONFIRM ORDER BUTTON */
+
+.confirm-order-btn {
+
+    width: 100%;
+
+    min-height: 48px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin: 24px auto 0;
+
+    padding: 13px 16px;
+
+    background: #ff5200;
+
+    color: #fff !important;
+
+    border: 1px solid #ff5200;
+
+    border-radius: 10px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 14px rgba(255, 82, 0, 0.18);
+
+    transition: background 0.2s ease, transform 0.2s ease;
+
+}
+
+.confirm-order-btn:hover {
+
+    background: #e54800;
+
+    transform: translateY(-2px);
+
+}
+
+.confirm-order-btn:active {
+
+    transform: translateY(0);
+
+}
+
+.checkout-note {
+
+    margin: 15px 0 0;
+
+    color: #888;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    text-align: center;
+
+}
+
+/* LOGIN MESSAGE */
+
+.login-message {
+
+    padding: 20px;
+
+    background: #fff8f4;
+
+    border: 1px solid #ffe2d5;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+}
+
+.login-message p {
+
+    margin: 0 0 14px;
+
+    color: #666;
+
+    font-size: 14px;
+
+}
+
+.login-checkout-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 42px;
+
+    padding: 0 24px;
+
+    background: #ff5200;
+
+    color: #fff !important;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    text-decoration: none !important;
+
+}
+
+/* ERROR MESSAGE */
+
+.checkout-error {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 0 auto 20px;
+
+    padding: 14px 18px;
+
+    color: #b42318;
+
+    background: #fff0ef;
+
+    border: 1px solid #ffc9c4;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+
+}
+
+/* EMPTY CART */
+
+.empty-checkout {
+
+    width: 90%;
+
+    max-width: 650px;
+
+    margin: 60px auto;
+
+    padding: 60px 28px;
+
+    background: #fff;
+
+    text-align: center;
+
+    border: 1px solid #eee;
+
+    border-radius: 18px;
+
+    box-shadow: 0 5px 22px rgba(0, 0, 0, 0.05);
+
+}
+
+.empty-checkout-icon {
+
+    margin-bottom: 18px;
+
+    font-size: 48px;
+
+}
+
+.empty-checkout h2 {
+
+    margin: 0 0 10px;
+
+    font-size: 25px;
+
+    font-weight: 800;
+
+}
+
+.empty-checkout p {
+
+    margin: 0 0 22px;
+
+    color: #777;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+}
+
+.back-restaurant-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    min-height: 46px;
+
+    padding: 0 23px;
+
+    background: #ff5200;
+
+    color: #fff !important;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    text-decoration: none !important;
+
+    transition: background 0.2s ease, transform 0.2s ease;
+
+}
+
+.back-restaurant-btn:hover {
+
+    background: #e54800;
+
+    transform: translateY(-2px);
+
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .checkout-container {
+
+        grid-template-columns: minmax(0, 1fr);
+
+    }
+
+    .checkout-summary {
+
+        position: static;
+
+        width: 100%;
+
+        max-width: 600px;
+
+        margin: 0 auto;
+
+    }
+
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+    .checkout-page {
+
+        padding: 30px 0 50px;
+
+    }
+
+    .checkout-header {
+
+        width: 92%;
+
+        margin-bottom: 28px;
+
+    }
+
+    .checkout-header h1 {
+
+        font-size: 29px;
+
+    }
+
+    .checkout-header p {
+
+        font-size: 14px;
+
+    }
+
+    .checkout-container {
+
+        width: 92%;
+
+        gap: 20px;
+
+    }
+
+    .checkout-item {
+
+        grid-template-columns: 75px minmax(0, 1fr);
+
+        gap: 12px;
+
+        padding: 12px;
+
+    }
+
+    .checkout-image-wrapper,
+
+    .checkout-image {
+
+        width: 75px;
+
+        height: 75px;
+
+    }
+
+    .checkout-item-details h3 {
+
+        font-size: 15px;
+
+    }
+
+    .checkout-item-price {
+
+        grid-column: 2;
+
+        margin-top: -5px;
+
+        font-size: 16px;
+
+    }
+
+    .checkout-address,
+
+    .checkout-total {
+
+        padding: 20px;
+
+    }
+
+    .confirm-order-btn {
+
+        width: 100%;
+
+    }
+
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 420px) {
+
+    .checkout-container,
+
+    .checkout-header {
+
+        width: 94%;
+
+    }
+
+    .checkout-item {
+
+        grid-template-columns: 65px minmax(0, 1fr);
+
+        gap: 10px;
+
+        padding: 10px;
+
+    }
+
+    .checkout-image-wrapper,
+
+    .checkout-image {
+
+        width: 65px;
+
+        height: 65px;
+
+    }
+
+    .checkout-item-details h3 {
+
+        font-size: 14px;
+
+    }
+
+    .checkout-item-details p {
+
+        font-size: 12px;
+
+    }
+
+    .checkout-address,
+
+    .checkout-total {
+
+        padding: 17px;
+
+    }
+
+    .checkout-grand-total strong {
+
+        font-size: 20px;
+
+    }
+
+}
+
+
+/* CURRENT LOCATION BUTTON */
+.location-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 12px;
+    padding: 12px 16px;
+    color: #ff5200;
+    background: #fff5ef;
+    border: 1px solid #ff5200;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.location-button:hover {
+    color: #fff;
+    background: #ff5200;
+}
+
+.location-button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+.location-status {
+    margin: 9px 0 0;
+    color: #666;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* =========================================
+   LUDO CHECKOUT - FULL PAGE BACKGROUND ONLY
+========================================= */
+
+:root {
+    /* 0 = clear image, 0.2 = light fade, 0.4 = stronger fade */
+    --checkout-page-fade: 0.20;
+}
+
+html {
+    min-height: 100%;
+    background-color: #fff1d8;
+}
+
+body {
+    position: relative;
+    isolation: isolate;
+    min-height: 100vh;
+    margin: 0;
+    background: transparent !important;
+}
+
+/* Full-page background image */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    background-image: url("../images/ludo-background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Fade overlay affects only the page background */
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    background: rgba(
+        255,
+        248,
+        236,
+        var(--checkout-page-fade)
+    );
+}
+
+/* Main checkout wrapper must not cover the background */
+.checkout-page {
+    background: transparent !important;
+}
+
+/* Mobile support */
+@media (max-width: 650px) {
+    body::before,
+    body::after {
+        position: absolute;
+        min-height: 100%;
+    }
+}

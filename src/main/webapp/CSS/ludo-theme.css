@@ -1,0 +1,172 @@
+
+/* =====================================================
+   LUDO GLOBAL THEME
+   Shared by all JSP pages
+   ===================================================== */
+
+:root {
+    --ludo-orange: #ff5200;
+    --ludo-orange-dark: #e84700;
+    --ludo-cream: #fff5e7;
+    --ludo-white: #ffffff;
+    --ludo-dark: #202124;
+    --ludo-muted: #737780;
+    --ludo-red: #ed4848;
+    --ludo-blue: #3989e8;
+    --ludo-green: #2ca66f;
+    --ludo-yellow: #f5c542;
+
+    --ludo-radius: 20px;
+    --ludo-shadow: 0 10px 30px rgba(65, 42, 20, 0.12);
+    --ludo-shadow-hover: 0 16px 38px rgba(65, 42, 20, 0.18);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+
+    color: var(--ludo-dark);
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+
+    /* Fallback if the background image is unavailable */
+    background-color: var(--ludo-cream);
+
+    /* Place the background image in src/main/webapp/images/ */
+    background-image:
+        linear-gradient(
+            rgba(255, 248, 238, 0.12),
+            rgba(255, 248, 238, 0.12)
+        ),
+        url("../images/ludo-background.png");
+
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/* Keep page content above the decorative background */
+body > main,
+body > .page-container,
+body > .restaurant-page,
+body > .menu-page,
+body > .cart-page,
+body > .checkout-page,
+body > .orders-page,
+body > .profile-page {
+    position: relative;
+}
+
+/* Shared content surfaces */
+.restaurant-card,
+.menu-card,
+.cart-container,
+.checkout-address,
+.checkout-total,
+.confirm-card,
+.order-card,
+.profile-card,
+.login-container,
+.register-container {
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: var(--ludo-radius);
+    box-shadow: var(--ludo-shadow);
+}
+
+/* Shared button appearance */
+button,
+.menu-btn,
+.confirm-order-btn,
+.login-checkout-btn,
+.back-restaurant-btn,
+.checkout-btn {
+    font-family: inherit;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.menu-btn,
+.confirm-order-btn,
+.login-checkout-btn,
+.back-restaurant-btn,
+.checkout-btn {
+    background: var(--ludo-orange);
+    color: #ffffff;
+    border: 1px solid var(--ludo-orange);
+    border-radius: 12px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.menu-btn:hover,
+.confirm-order-btn:hover,
+.login-checkout-btn:hover,
+.back-restaurant-btn:hover,
+.checkout-btn:hover {
+    background: var(--ludo-orange-dark);
+    color: #ffffff;
+    box-shadow: 0 8px 20px rgba(255, 82, 0, 0.23);
+    transform: translateY(-2px);
+}
+
+/* Shared form controls */
+input,
+textarea,
+select {
+    max-width: 100%;
+    font: inherit;
+    border-radius: 10px;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid rgba(57, 137, 232, 0.5);
+    outline-offset: 3px;
+}
+
+/* Keep images responsive */
+img {
+    max-width: 100%;
+}
+
+/* Mobile background behaviour */
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+        background-position: center top;
+        background-size: cover;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}

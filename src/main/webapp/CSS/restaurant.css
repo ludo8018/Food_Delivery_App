@@ -1,0 +1,779 @@
+/* Slightly reduce navbar width on restaurant page */
+.navbar {
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+/* =========================================
+   FIX: FULL-PAGE LUDO FOOD BACKGROUND
+========================================= */
+
+html {
+    min-height: 100%;
+    background: #fff1d8 !important;
+}
+
+body {
+    position: relative;
+    isolation: isolate;
+    min-height: 100vh;
+    margin: 0;
+    background: transparent !important;
+}
+
+/* Full-page background image */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    background-image: url("../images/ludo-background.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Adjustable fade overlay */
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    background: rgba(255, 244, 224, 0.25);
+}
+
+/* These page sections must not paint a solid background */
+.restaurant-page {
+    background: transparent !important;
+}
+
+.food-categories {
+    background: rgba(255, 255, 255, 0.92) !important;
+}
+
+/* Keep restaurant information readable */
+.restaurant-page .restaurant-content {
+    background-color: rgba(255, 255, 255, 0.86) !important;
+    background-image: url("../images/restaurant-card-background.png") !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+@media (max-width: 650px) {
+    body::before {
+        background-attachment: scroll;
+    }
+}
+
+/* =========================================
+   LUDO CATEGORY BUTTONS
+   ========================================= */
+
+.food-categories {
+    width: 90%;
+    max-width: 1200px;
+    margin: 12px auto 18px;
+    padding: 12px 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.94);
+    border-radius: 18px;
+}
+
+.food-categories .category-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 11px 22px;
+    background: #ffffff;
+    color: #3d3029;
+
+    border: 1px solid #ff7b45;
+    border-radius: 16px;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+
+    transition: background 0.2s ease,
+                color 0.2s ease,
+                transform 0.2s ease;
+}
+
+.food-categories .category-btn:hover,
+.food-categories .category-btn.active {
+    background: #ff5a1f;
+    color: #ffffff;
+    border-color: #ff5a1f;
+}
+
+.food-categories .category-btn:hover {
+    transform: translateY(-1px);
+}
+
+@media (max-width: 650px) {
+    .food-categories {
+        width: 92%;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+}
+
+/* LUDO background inside the highlighted restaurant details area */
+.restaurant-page .restaurant-content {
+    background-image: url("../images/restaurant-card-background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* Keep the restaurant text readable */
+    background-color: #fff8ec;
+    border-radius: 0 0 22px 22px;
+
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Give the content a soft light overlay */
+.restaurant-page .restaurant-content::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.82);
+    border-radius: inherit;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Keep the View Menu button above the background */
+.restaurant-page .restaurant-content .menu-btn {
+    position: relative;
+    z-index: 2;
+}
+
+/* =========================================================
+   LUDO - RESTAURANT PAGE
+   Board Game Background Theme
+   ========================================================= */
+	
+/* =========================================
+   LUDO RESTAURANT PAGE BACKGROUND
+========================================= */
+
+html {
+    min-height: 100%;
+    background-color: #fff1d8;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+
+    background-color: #fff1d8;
+    background-image:
+        linear-gradient(
+            rgba(255, 244, 224, 0.22),
+            rgba(255, 244, 224, 0.22)
+        ),
+        url("../images/ludo-background.png");
+
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    color: #202124;
+}
+
+/* Keep the main page transparent */
+.restaurant-page {
+    background: transparent !important;
+}
+
+/* Responsive background behavior */
+@media (max-width: 650px) {
+    body {
+        background-attachment: scroll;
+    }
+}
+	
+/* =========================================================
+   RESTAURANT PAGE
+   ========================================================= */
+
+.restaurant-page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px 0 70px;
+    background: transparent;
+    color: #202124;
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   HERO SECTION
+   ========================================================= */
+
+.restaurant-page .restaurant-hero {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 35px 20px 40px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.restaurant-page .restaurant-hero h1 {
+    margin: 0 0 12px;
+    color: #202124;
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.8px;
+}
+
+.restaurant-page .restaurant-hero h1 span {
+    color: #ff5a1f;
+}
+
+.restaurant-page .restaurant-hero p {
+    margin: 0;
+    color: #6b7280;
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* =========================================================
+   RESTAURANT GRID
+   ========================================================= */
+
+.restaurant-page .restaurant-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+    align-items: stretch;
+}
+
+/* =========================================================
+   RESTAURANT CARD
+   Every card uses the same LUDO background image
+   ========================================================= */
+
+.restaurant-page .restaurant-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+
+    background-color: #fff5e7;
+    background-image: url("../images/restaurant-card-background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border: 2px solid rgba(255, 255, 255, 0.95);
+    border-radius: 22px;
+
+    box-shadow: 0 10px 30px rgba(32, 33, 36, 0.12);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.restaurant-page .restaurant-card:hover {
+    transform: translateY(-5px);
+    border-color: #ff9b54;
+    box-shadow: 0 16px 36px rgba(255, 90, 31, 0.18);
+}
+
+/* =========================================================
+   ORANGE ACCENT
+   ========================================================= */
+
+.restaurant-page .restaurant-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 72px;
+    height: 4px;
+
+    background: linear-gradient(90deg, #ff5a1f, #ff9b54);
+    border-radius: 0 0 8px 0;
+    z-index: 20;
+    pointer-events: none;
+}
+
+/* =========================================================
+   RESTAURANT IMAGE WRAPPER
+   Keeps the existing food image visible
+   ========================================================= */
+
+.restaurant-page .restaurant-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    flex-shrink: 0;
+    overflow: hidden;
+    background: #fff0e6;
+}
+
+/* =========================================================
+   RESTAURANT FOOD IMAGE
+   ========================================================= */
+
+.restaurant-page .restaurant-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition:
+        transform 0.45s ease,
+        filter 0.45s ease;
+}
+
+.restaurant-page .restaurant-card:hover .restaurant-image {
+    transform: scale(1.05);
+    filter: saturate(1.06);
+}
+
+/* =========================================================
+   FOOD IMAGE OVERLAY
+   ========================================================= */
+
+.restaurant-page .restaurant-image-wrapper::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 42%;
+
+    background: linear-gradient(
+        to top,
+        rgba(24, 24, 27, 0.28),
+        transparent
+    );
+
+    pointer-events: none;
+}
+
+/* =========================================================
+   RESTAURANT RATING
+   ========================================================= */
+
+.restaurant-page .restaurant-rating {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    padding: 7px 11px;
+    background: #16834a;
+    color: #ffffff;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 9px;
+
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.18);
+}
+
+/* =========================================================
+   RESTAURANT CONTENT
+   Translucent white background reveals the LUDO image
+   ========================================================= */
+
+
+/* LUDO background - final override */
+.restaurant-page .restaurant-content {
+    background-color: #fff8ec !important;
+    background-image: url("../images/restaurant-card-background.png") !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+
+/* =========================================================
+   RESTAURANT NAME
+   ========================================================= */
+
+.restaurant-page .restaurant-name {
+    margin: 0 0 10px;
+    color: #202124;
+
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 750;
+    line-height: 1.35;
+
+    overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   CUISINE LABEL
+   ========================================================= */
+
+.restaurant-page .restaurant-cuisine {
+    display: inline-block;
+    width: fit-content;
+    max-width: 100%;
+
+    margin-bottom: 13px;
+    padding: 6px 11px;
+
+    background: #fff2d6;
+    color: #925700;
+
+    border: 1px solid rgba(244, 197, 66, 0.35);
+    border-radius: 20px;
+
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 750;
+    line-height: 1.2;
+
+    overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   RESTAURANT ADDRESS
+   ========================================================= */
+
+.restaurant-page .restaurant-address {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+
+    margin: 0 0 15px;
+    color: #50545c;
+
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+
+    overflow-wrap: anywhere;
+}
+
+.restaurant-page .restaurant-address-icon {
+    flex-shrink: 0;
+    color: #ff5a1f;
+    font-size: 15px;
+}
+
+/* =========================================================
+   RESTAURANT DETAILS
+   ========================================================= */
+
+.restaurant-page .restaurant-details {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 16px;
+    padding-top: 13px;
+
+    border-top: 1px solid rgba(120, 100, 80, 0.16);
+}
+
+/* =========================================================
+   DELIVERY TIME
+   ========================================================= */
+
+.restaurant-page .delivery-time {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #454a52;
+
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.restaurant-page .delivery-icon {
+    color: #ff5a1f;
+    font-size: 15px;
+}
+
+/* =========================================================
+   VIEW MENU BUTTON
+   ========================================================= */
+
+.restaurant-page a.menu-btn {
+    width: 78%;
+    min-height: 48px;
+
+    margin: auto auto 0;
+    padding: 12px 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    box-sizing: border-box;
+
+    background: linear-gradient(135deg, #ff5a1f, #ff701f);
+    color: #ffffff !important;
+
+    border: 1px solid #ff5a1f;
+    border-radius: 12px;
+
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 750;
+
+    text-decoration: none !important;
+
+    box-shadow: 0 6px 16px rgba(255, 90, 31, 0.20);
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.restaurant-page a.menu-btn span {
+    color: #ffffff !important;
+
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 750;
+
+    text-decoration: none !important;
+}
+
+.restaurant-page a.menu-btn:hover {
+    background: linear-gradient(135deg, #ed4814, #ff5a1f);
+    color: #ffffff !important;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 9px 20px rgba(255, 90, 31, 0.28);
+    text-decoration: none !important;
+}
+
+.restaurant-page a.menu-btn:hover span {
+    color: #ffffff !important;
+}
+
+.restaurant-page a.menu-btn span:last-child {
+    transition: transform 0.2s ease;
+}
+
+.restaurant-page a.menu-btn:hover span:last-child {
+    transform: translateX(4px);
+}
+
+.restaurant-page a.menu-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 9px rgba(255, 90, 31, 0.18);
+}
+
+/* =========================================================
+   EMPTY RESTAURANT STATE
+   ========================================================= */
+
+.restaurant-page .empty-restaurant {
+    width: 90%;
+    max-width: 650px;
+
+    margin: 40px auto;
+    padding: 60px 25px;
+
+    background: rgba(255, 255, 255, 0.92);
+    text-align: center;
+
+    border: 1px solid rgba(255, 90, 31, 0.16);
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(32, 33, 36, 0.10);
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.restaurant-page .empty-restaurant-icon {
+    width: 76px;
+    height: 76px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 18px;
+
+    background: #fff0e6;
+    border: 1px solid #ffe0ce;
+    border-radius: 22px;
+
+    font-size: 30px;
+}
+
+.restaurant-page .empty-restaurant h2 {
+    margin: 0 0 10px;
+    color: #202124;
+
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: 750;
+}
+
+.restaurant-page .empty-restaurant p {
+    margin: 0;
+    color: #6b7280;
+
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* =========================================================
+   TABLET RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+    .restaurant-page .restaurant-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+    }
+
+    .restaurant-page .restaurant-hero h1 {
+        font-size: 34px;
+    }
+}
+
+/* =========================================================
+   MOBILE RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 650px) {
+    .restaurant-page {
+        padding: 10px 0 45px;
+    }
+
+    .restaurant-page .restaurant-hero {
+        width: 92%;
+        padding: 30px 10px;
+    }
+
+    .restaurant-page .restaurant-hero h1 {
+        font-size: 29px;
+        letter-spacing: -0.4px;
+    }
+
+    .restaurant-page .restaurant-hero p {
+        font-size: 14px;
+    }
+
+    .restaurant-page .restaurant-container {
+        width: 92%;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 22px;
+    }
+
+    .restaurant-page .restaurant-image-wrapper {
+        height: 220px;
+    }
+
+    .restaurant-page .restaurant-content {
+        padding: 18px;
+    }
+
+    .restaurant-page .restaurant-name {
+        font-size: 19px;
+    }
+
+    .restaurant-page a.menu-btn {
+        width: 82%;
+    }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 400px) {
+    .restaurant-page .restaurant-container {
+        width: 94%;
+        gap: 18px;
+    }
+
+    .restaurant-page .restaurant-hero h1 {
+        font-size: 26px;
+    }
+
+    .restaurant-page .restaurant-hero p {
+        font-size: 13px;
+    }
+
+    .restaurant-page .restaurant-image-wrapper {
+        height: 195px;
+    }
+
+    .restaurant-page .restaurant-content {
+        padding: 16px;
+    }
+
+    .restaurant-page a.menu-btn {
+        width: 90%;
+    }
+}
+
+/* =========================================================
+   ACCESSIBILITY: REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .restaurant-page .restaurant-card,
+    .restaurant-page .restaurant-image,
+    .restaurant-page a.menu-btn,
+    .restaurant-page a.menu-btn span {
+        transition: none !important;
+    }
+
+    .restaurant-page .restaurant-card:hover,
+    .restaurant-page .restaurant-card:hover .restaurant-image,
+    .restaurant-page a.menu-btn:hover {
+        transform: none;
+    }
+}

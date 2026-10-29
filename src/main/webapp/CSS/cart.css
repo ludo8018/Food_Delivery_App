@@ -1,0 +1,1259 @@
+
+/* Applied coupon status */
+.applied-coupon-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 14px;
+    padding: 12px;
+    border: 1px solid #b7e4c7;
+    border-radius: 10px;
+    background: #f0fff5;
+}
+
+.applied-coupon-details {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+}
+
+.success-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #198754;
+    color: #fff;
+    font-weight: bold;
+}
+
+.applied-coupon-details strong {
+    color: #176b3a;
+    font-size: 13px;
+}
+
+.applied-coupon-details p {
+    margin: 4px 0 0;
+    color: #47745a;
+    font-size: 11px;
+}
+
+.remove-coupon-btn {
+    padding: 8px 12px;
+    border: 1px solid #dc3545;
+    border-radius: 7px;
+    background: #fff;
+    color: #dc3545;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.remove-coupon-btn:hover {
+    background: #dc3545;
+    color: #fff;
+}
+
+@media (max-width: 400px) {
+    .applied-coupon-box {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+}
+
+/* Offers & Coupons accordion */
+.coupon-accordion {
+    width: 100%;
+    margin: 18px 0;
+}
+
+.apply-coupon-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 14px;
+    border: 1px solid rgba(124, 77, 255, 0.2);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.88);
+    color: #222;
+    text-align: left;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.coupon-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: #eee7ff;
+    font-size: 20px;
+}
+
+.coupon-link-details {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.coupon-link-details strong {
+    font-size: 14px;
+}
+
+.coupon-link-details small {
+    color: #666;
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.coupon-arrow {
+    color: #7c4dff;
+    font-size: 22px;
+    transition: transform 0.2s ease;
+}
+
+.apply-coupon-link[aria-expanded="true"] .coupon-arrow {
+    transform: rotate(180deg);
+}
+
+/* Coupon box under the button */
+.coupon-panel {
+    margin-top: 10px;
+    padding: 14px;
+    border: 1px solid #e5defa;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+}
+
+.coupon-panel[hidden] {
+    display: none;
+}
+
+.coupon-panel h3 {
+    margin: 0 0 12px;
+    color: #222;
+    font-size: 16px;
+}
+
+.coupon-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 12px 0;
+    border-bottom: 1px dashed #ddd;
+}
+
+.coupon-card:last-child {
+    border-bottom: none;
+}
+
+.coupon-card-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.coupon-card-info strong {
+    color: #673de6;
+    font-size: 13px;
+}
+
+.coupon-card-info p {
+    margin: 5px 0;
+    color: #333;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.coupon-card-info small {
+    color: #777;
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+.coupon-apply-btn {
+    padding: 8px 10px;
+    border: 1px solid #7c4dff;
+    border-radius: 7px;
+    background: white;
+    color: #673de6;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.coupon-apply-btn:hover {
+    background: #7c4dff;
+    color: white;
+}
+
+.coupon-message {
+    margin: 12px 0 0;
+    color: #333;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+@media (max-width: 480px) {
+    .coupon-panel {
+        padding: 10px;
+    }
+
+    .coupon-card {
+        gap: 6px;
+    }
+
+    .coupon-apply-btn {
+        padding: 8px;
+    }
+}
+
+/* LUDO background for the Order Summary */
+.cart-page aside.cart-total {
+    background: 
+        linear-gradient(
+            rgba(255, 248, 236, 0.80),
+            rgba(255, 248, 236, 0.80)
+        ),
+        url("../images/Food Fiesta Ludo Board.png") center / cover no-repeat !important;
+
+    border: 2px solid #e8c987 !important;
+    border-radius: 18px !important;
+    opacity: 1 !important;
+}
+
+
+body .navbar-logo a {
+    gap: 12px !important;
+}
+body .navbar-logo a::before {
+    content: "⚄" !important;
+    width: 39px;
+    height: 39px;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    background: #FF5A1F;
+    border-radius: 11px;
+    font-size: 23px;
+    line-height: 1;
+}
+/* Cart navbar — match Menu page shape */
+body .navbar {
+    width: calc(100% - 48px) !important;
+    max-width: 1540px !important;
+    min-height: 82px !important;
+    margin: 12px auto 0 !important;
+    padding: 0 28px !important;
+    box-sizing: border-box !important;
+
+    border-radius: 24px !important;
+    background: #ffffff !important;
+    border: 1px solid rgba(32, 33, 36, 0.07) !important;
+    box-shadow: 0 8px 28px rgba(32, 33, 36, 0.07) !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+}
+
+@media (max-width: 700px) {
+    body .navbar {
+        width: calc(100% - 24px) !important;
+        min-height: 72px !important;
+        height: auto !important;
+        padding: 14px !important;
+        flex-wrap: wrap !important;
+    }
+}
+
+/* LUDO background for Cart page */
+body {
+    background-image:
+        linear-gradient(
+            rgba(255, 248, 236, 0.35),
+            rgba(255, 248, 236, 0.35)
+        ),
+        url("../images/ludo-background.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Keep cart content readable */
+.cart-container,
+.cart-item,
+.cart-total,
+.empty-cart {
+    background-color: rgba(255, 255, 255, 0.92);
+}
+
+
+/* =========================================================
+   LUDO - CART PAGE
+   ========================================================= */
+
+
+/* =========================================================
+   CART PAGE
+   ========================================================= */
+
+.cart-page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px 0 70px;
+
+    background-color: #fff8ec;
+    background-image:
+        linear-gradient(
+            rgba(255, 248, 236, 0.35),
+            rgba(255, 248, 236, 0.35)
+        ),
+        url("../images/ludo-background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+/* =========================================================
+   CART HEADER
+   ========================================================= */
+
+.cart-header {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 0 auto 35px;
+
+    text-align: center;
+}
+
+.cart-header h1 {
+    margin: 0 0 10px;
+
+    color: #222222;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 34px;
+    font-weight: 800;
+
+    line-height: 1.2;
+}
+
+.cart-header h1 span {
+    color: #ff5200;
+}
+
+.cart-header p {
+    margin: 0;
+
+    color: #777777;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   MAIN CART LAYOUT
+   ========================================================= */
+
+.cart-container {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) 330px;
+
+    gap: 28px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   CART ITEMS SECTION
+   ========================================================= */
+
+.cart-items {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+
+/* =========================================================
+   CART ITEM
+   ========================================================= */
+
+.cart-item {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 125px minmax(0, 1fr) auto;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 18px;
+
+    background: #ffffff;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 16px;
+
+    box-shadow:
+        7px 7px 18px rgba(0, 0, 0, 0.07),
+        -5px -5px 15px rgba(255, 255, 255, 0.95);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.cart-item:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        9px 10px 23px rgba(0, 0, 0, 0.09),
+        -5px -5px 15px rgba(255, 255, 255, 0.95);
+}
+
+
+/* =========================================================
+   CART IMAGE
+   ========================================================= */
+
+.cart-image {
+    width: 125px;
+    height: 105px;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    background: #eeeeee;
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   CART DETAILS
+   ========================================================= */
+
+.cart-details {
+    min-width: 0;
+
+    align-self: stretch;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.cart-details h2 {
+    margin: 0 0 7px;
+
+    color: #222222;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 19px;
+    font-weight: 700;
+
+    line-height: 1.3;
+}
+
+.cart-details p {
+    margin: 0 0 9px;
+
+    color: #777777;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+}
+
+.item-price {
+    color: #666666;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.item-price::first-letter {
+    color: #ff5200;
+}
+
+
+/* =========================================================
+   QUANTITY CONTROL
+   ========================================================= */
+
+.quantity-control {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-top: 12px;
+}
+
+.quantity-form {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   QUANTITY BUTTON
+   ========================================================= */
+
+.quantity-btn {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    background: #f5f5f5;
+
+    color: #ff5200;
+
+    border: 1px solid #e6e6e6;
+
+    border-radius: 8px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    box-shadow:
+        3px 3px 8px rgba(0, 0, 0, 0.07),
+        -3px -3px 8px rgba(255, 255, 255, 0.95);
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.quantity-btn:hover {
+    background: #ff5200;
+
+    color: #ffffff;
+
+    border-color: #ff5200;
+
+    transform: translateY(-1px);
+}
+
+.quantity-btn:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   QUANTITY NUMBER
+   ========================================================= */
+
+.quantity-number {
+    min-width: 30px;
+
+    color: #222222;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   SUBTOTAL
+   ========================================================= */
+
+.subtotal {
+    min-width: 105px;
+
+    align-self: center;
+
+    color: #222222;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 18px;
+    font-weight: 800;
+
+    text-align: right;
+
+    white-space: nowrap;
+}
+
+.subtotal::first-letter {
+    color: #ff5200;
+}
+
+
+/* =========================================================
+   ORDER SUMMARY
+   ========================================================= */
+
+.cart-total {
+    position: sticky;
+
+    top: 95px;
+
+    width: 100%;
+
+    padding: 25px;
+
+    background: #ffffff;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 16px;
+
+    box-shadow:
+        7px 7px 18px rgba(0, 0, 0, 0.07),
+        -5px -5px 15px rgba(255, 255, 255, 0.95);
+}
+
+.cart-total::before {
+    content: "ORDER SUMMARY";
+
+    display: block;
+
+    margin-bottom: 20px;
+
+    color: #222222;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================================================
+   TOTAL ROW
+   ========================================================= */
+
+.total-row {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+/* =========================================================
+   TOTAL LABEL
+   ========================================================= */
+
+.total-label {
+    color: #555555;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   TOTAL PRICE
+   ========================================================= */
+
+.total-price {
+    color: #ff5200;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 24px;
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   CHECKOUT BUTTON
+   ========================================================= */
+
+.checkout-btn {
+    width: 85%;
+    height: 44px;
+
+    margin: 20px auto 0;
+    padding: 0 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    background: #ff5200;
+    color: #ffffff !important;
+
+    border: 1px solid #ff5200;
+    border-radius: 9px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+
+    line-height: 1.2;
+    text-align: center;
+
+    text-decoration: none !important;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 12px rgba(255, 82, 0, 0.20);
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.checkout-btn:hover {
+    background: #e54800;
+    color: #ffffff !important;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 18px rgba(255, 82, 0, 0.28);
+}
+
+.checkout-btn:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   EMPTY CART
+   ========================================================= */
+.empty-cart {
+    width: 100%;
+    max-width: 380px;
+    margin: 60px auto;
+    padding: 65px 30px;
+    background: #ffffff;
+    text-align: center;
+    border: 1px solid #eeeeee;
+    border-radius: 18px;
+    box-shadow:
+        7px 7px 18px rgba(0, 0, 0, 0.07),
+        -5px -5px 15px rgba(255, 255, 255, 0.95);
+
+    /* Added image background */
+    background-image:
+        linear-gradient(
+            rgba(255, 248, 236, 0.70),
+            rgba(255, 248, 236, 0.70)
+        ),
+        url("../images/ludo-food-board.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.empty-cart::before {
+    content: "🛒";
+    display: block;
+    margin-bottom: 18px;
+    font-size: 48px;
+}
+.empty-cart h2 {
+    margin: 0 0 10px;
+    color: #222222;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+}
+.empty-cart p {
+    margin: 0 0 22px;
+    color: #777777;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+
+/* =========================================================
+   BROWSE RESTAURANTS BUTTON
+   ========================================================= */
+
+.restaurant-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 44px;
+
+    padding: 0 22px;
+
+    background: #ff5200;
+
+    color: #ffffff !important;
+
+    border-radius: 9px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    text-decoration: none !important;
+
+    box-shadow:
+        0 5px 12px rgba(255, 82, 0, 0.18);
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.restaurant-btn:hover {
+    background: #e54800;
+
+    color: #ffffff !important;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 18px rgba(255, 82, 0, 0.25);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .cart-container {
+        grid-template-columns: 1fr;
+    }
+
+    .cart-total {
+        position: static;
+
+        max-width: 500px;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .cart-page {
+        padding-top: 30px;
+    }
+
+    .cart-header {
+        width: 92%;
+
+        margin-bottom: 28px;
+    }
+
+    .cart-header h1 {
+        font-size: 29px;
+    }
+
+    .cart-header p {
+        font-size: 14px;
+    }
+
+    .cart-container {
+        width: 92%;
+
+        gap: 20px;
+    }
+
+    .cart-item {
+        grid-template-columns: 90px minmax(0, 1fr);
+
+        gap: 15px;
+
+        padding: 14px;
+    }
+
+    .cart-image {
+        width: 90px;
+        height: 90px;
+    }
+
+    .cart-details h2 {
+        font-size: 17px;
+    }
+
+    .cart-details p {
+        font-size: 12px;
+    }
+
+    .quantity-control {
+        justify-content: flex-start;
+
+        margin-top: 10px;
+    }
+
+    .subtotal {
+        grid-column: 2;
+
+        min-width: 0;
+
+        margin-top: -5px;
+
+        text-align: left;
+
+        font-size: 17px;
+    }
+
+    .cart-total {
+        padding: 22px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+	
+/* =========================================================
+   LUDO BACKGROUND — ORDER SUMMARY
+========================================================= */
+
+aside.cart-total {
+    background-color: #fff8ec !important;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 248, 236, 0.55),
+            rgba(255, 248, 236, 0.55)
+        ),
+        url("../images/Food Fiesta Ludo Board.png") !important;
+
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+    .cart-container {
+        width: 94%;
+    }
+
+    .cart-item {
+        grid-template-columns: 75px minmax(0, 1fr);
+
+        gap: 12px;
+
+        padding: 12px;
+    }
+
+    .cart-image {
+        width: 75px;
+        height: 75px;
+    }
+
+    .cart-details h2 {
+        font-size: 16px;
+    }
+
+    .quantity-btn {
+        width: 32px;
+        height: 32px;
+    }
+
+    .quantity-number {
+        min-width: 25px;
+    }
+
+    .cart-total {
+        padding: 20px;
+    }
+
+    .total-price {
+        font-size: 21px;
+    }
+}
+
+
+/* Coupon Section */
+.coupon-section {
+    margin: 20px 0;
+    padding: 18px;
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid #e4e7eb;
+    border-radius: 14px;
+    box-sizing: border-box;
+}
+
+.coupon-section h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    color: #222;
+}
+
+.coupon-section > p {
+    margin: 0 0 14px;
+    color: #666;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.coupon-form {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+}
+
+.coupon-form input {
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #d5d9df;
+    border-radius: 8px;
+    box-sizing: border-box;
+    text-transform: uppercase;
+}
+
+.coupon-form button {
+    padding: 11px 16px;
+    background: #ff5a1f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.applied-coupon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 14px;
+    padding: 12px;
+    background: #edfff3;
+    border: 1px solid #b9e8c9;
+    border-radius: 8px;
+    overflow-wrap: anywhere;
+}
+
+.applied-coupon strong {
+    color: #16803d;
+}
+
+.applied-coupon form {
+    flex-shrink: 0;
+}
+
+.remove-coupon-btn {
+    border: none;
+    background: transparent;
+    color: #d93025;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.coupon-message {
+    margin: 12px 0 0;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 480px) {
+    .coupon-section {
+        padding: 14px;
+    }
+
+    .coupon-form {
+        flex-wrap: wrap;
+    }
+
+    .coupon-form input {
+        flex-basis: 100%;
+    }
+
+    .coupon-form button {
+        width: 100%;
+    }
+}
+
+/* =========================
+   OFFERS & COUPONS LINK
+========================= */
+
+.apply-coupon-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 20px 0;
+    padding: 16px;
+    color: inherit;
+    text-decoration: none;
+    background: rgba(124, 77, 255, 0.06);
+    border: 1px solid rgba(124, 77, 255, 0.22);
+    border-radius: 12px;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.apply-coupon-link:hover {
+    background: rgba(124, 77, 255, 0.11);
+    border-color: #7c4dff;
+}
+
+.coupon-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: #eee7ff;
+    font-size: 22px;
+}
+
+.coupon-link-details {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 0;
+}
+
+.coupon-link-details strong {
+    font-size: 15px;
+}
+
+.coupon-link-details small {
+    color: #777;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.coupon-arrow {
+    flex-shrink: 0;
+    color: #7c4dff;
+    font-size: 28px;
+    line-height: 1;
+}
+
+.cart-note {
+    margin-top: 16px;
+    color: #777;
+    font-size: 12px;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .apply-coupon-link {
+        gap: 10px;
+        padding: 12px;
+    }
+
+    .coupon-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 19px;
+    }
+
+    .coupon-link-details strong {
+        font-size: 14px;
+    }
+
+    .coupon-link-details small {
+        font-size: 11px;
+    }
+}

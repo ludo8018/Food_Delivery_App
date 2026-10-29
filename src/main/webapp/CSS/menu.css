@@ -1,0 +1,819 @@
+
+/* Menu card content background — match restaurant cards */
+
+.menu-card .menu-content {
+    background-color: rgba(255, 248, 236, 0.65) !important;
+    background-image:
+        linear-gradient(
+            rgba(255, 248, 236, 0.82),
+            rgba(255, 248, 236, 0.82)
+        ),
+        url("../images/restaurant-card-background.png") !important;
+
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+
+/* Keep the full menu card rounded */
+.menu-card {
+    overflow: hidden;
+    border-radius: 22px;
+}
+
+/* =========================================
+   MENU NAVBAR — MATCH RESTAURANT PAGE
+========================================= */
+
+body .navbar {
+    position: sticky;
+    top: 12px;
+    z-index: 1000;
+
+    width: calc(100% - 48px);
+    max-width: 1540px;
+    height: 82px;
+    min-height: 82px;
+
+    margin: 12px auto 0;
+    padding: 0 28px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #ffffff;
+    border: 1px solid rgba(32, 33, 36, 0.07);
+    border-radius: 24px;
+    box-shadow: 0 8px 28px rgba(32, 33, 36, 0.07);
+
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+}
+
+/* LUDO LOGO */
+body .navbar-logo a {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    color: #ff5a1f !important;
+    font-size: 29px;
+    font-weight: 900;
+    letter-spacing: -1.3px;
+    text-decoration: none;
+}
+
+body .navbar-logo a::before {
+    content: "⚄";
+
+    width: 39px;
+    height: 39px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+    background: #ff5a1f;
+    border-radius: 11px;
+
+    font-size: 23px;
+    line-height: 1;
+}
+
+/* NAVIGATION LINKS */
+body .navbar-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+body .navbar-links a.nav-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 42px;
+    padding: 0 14px;
+    box-sizing: border-box;
+
+    color: #333333 !important;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 12px;
+
+    font-size: 14px;
+    font-weight: 650;
+    text-decoration: none;
+}
+
+/* LOGIN BUTTON */
+body .navbar-links a.login-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 43px;
+    padding: 0 21px;
+    box-sizing: border-box;
+
+    color: #ffffff !important;
+    background: #ff5a1f;
+    border: 1px solid #ff5a1f;
+    border-radius: 12px;
+
+    font-size: 14px;
+    font-weight: 750;
+    text-decoration: none;
+}
+
+/* PROFILE BUTTON */
+body .navbar-links a.profile-link {
+    width: 43px;
+    height: 43px;
+    margin-left: 4px;
+    box-sizing: border-box;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+    body .navbar {
+        width: calc(100% - 24px);
+        height: auto;
+        min-height: 72px;
+        padding: 14px;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    body .navbar-links {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+}
+
+/* =========================================================
+   LUDO - MENU PAGE
+   ========================================================= */
+
+
+/* =========================================================
+   MENU PAGE
+   ========================================================= */
+
+.menu-page {
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 40px 0 70px;
+
+    background: #f7f7f7;
+}
+
+
+/* =========================================================
+   MENU HERO
+   ========================================================= */
+
+.menu-hero {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 0 auto 35px;
+
+    text-align: center;
+}
+
+
+.menu-hero h1 {
+    margin: 0 0 10px;
+
+    color: #222222;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 34px;
+    font-weight: 800;
+
+    line-height: 1.2;
+}
+
+
+.menu-hero h1 span {
+    color: #ff5200;
+}
+
+
+.menu-hero p {
+    margin: 0;
+
+    color: #777777;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   MENU CONTAINER
+   ========================================================= */
+
+.menu-container {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 26px;
+}
+
+
+/* =========================================================
+   MENU CARD
+   ========================================================= */
+
+.menu-card {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid rgba(0, 0, 0, 0.04);
+
+    border-radius: 16px;
+
+    box-shadow:
+        7px 7px 18px rgba(0, 0, 0, 0.08),
+        -5px -5px 15px rgba(255, 255, 255, 0.95);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.menu-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        10px 12px 25px rgba(0, 0, 0, 0.11),
+        -6px -6px 16px rgba(255, 255, 255, 0.95);
+}
+
+
+/* =========================================================
+   MENU IMAGE
+   ========================================================= */
+
+.menu-image-wrapper {
+    position: relative;
+
+    width: 100%;
+    height: 210px;
+
+    overflow: hidden;
+
+    background: #eeeeee;
+}
+
+
+.menu-image {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.35s ease;
+}
+
+
+.menu-card:hover .menu-image {
+    transform: scale(1.04);
+}
+
+
+/* =========================================================
+   MENU RATING
+   ========================================================= */
+
+.menu-rating {
+    position: absolute;
+
+    right: 14px;
+    bottom: 14px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 52px;
+    height: 32px;
+
+    padding: 0 10px;
+
+    background: #16803c;
+
+    color: #ffffff;
+
+    border-radius: 8px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================================================
+   MENU CONTENT
+   ========================================================= */
+
+.menu-content {
+    display: flex;
+
+    flex-direction: column;
+
+    flex: 1;
+
+    padding: 18px;
+}
+
+
+.menu-name {
+    margin: 0 0 8px;
+
+    color: #222222;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 20px;
+    font-weight: 750;
+
+    line-height: 1.3;
+}
+
+
+/* =========================================================
+   MENU DESCRIPTION
+   ========================================================= */
+
+.menu-description {
+    min-height: 44px;
+
+    margin: 0 0 13px;
+
+    color: #777777;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   PRICE
+   ========================================================= */
+
+.menu-price {
+    margin-bottom: 13px;
+
+    color: #222222;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 19px;
+    font-weight: 800;
+}
+
+
+.menu-price span {
+    color: #ff5200;
+}
+
+
+/* =========================================================
+   AVAILABILITY
+   ========================================================= */
+
+.menu-availability {
+    display: inline-flex;
+
+    align-items: center;
+
+    width: fit-content;
+
+    margin-bottom: 16px;
+
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+.menu-availability.available {
+    background: #eaf8ef;
+
+    color: #16803c;
+}
+
+
+.menu-availability.unavailable {
+    background: #fff0ed;
+
+    color: #d63c19;
+}
+
+
+/* =========================================================
+   ADD TO CART
+   ========================================================= */
+
+.add-cart-btn {
+    width: 82%;
+    min-height: 44px;
+
+    margin: auto auto 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    background: #ff5200;
+
+    color: #ffffff;
+
+    border: 1px solid #ff5200;
+
+    border-radius: 9px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 12px rgba(255, 82, 0, 0.18);
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.add-cart-btn:hover {
+    background: #e54800;
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 18px rgba(255, 82, 0, 0.25);
+}
+
+
+.add-cart-btn span {
+    font-size: 16px;
+
+    transition:
+        transform 0.2s ease;
+}
+
+
+.add-cart-btn:hover span {
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   DISABLED BUTTON
+   ========================================================= */
+
+.add-cart-btn.disabled {
+    background: #dddddd;
+
+    color: #888888;
+
+    border-color: #dddddd;
+
+    cursor: not-allowed;
+
+    box-shadow: none;
+}
+
+
+.add-cart-btn.disabled:hover {
+    background: #dddddd;
+
+    color: #888888;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+
+/* =========================================================
+   QUANTITY CONTROLS
+   ========================================================= */
+
+.menu-quantity {
+    width: 82%;
+
+    margin: auto auto 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+}
+
+
+.quantity-btn {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #f4f4f4;
+
+    color: #ff5200;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 8px;
+
+    font-size: 18px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow:
+        3px 3px 8px rgba(0, 0, 0, 0.08),
+        -3px -3px 8px rgba(255, 255, 255, 0.95);
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.quantity-btn:hover {
+    background: #ff5200;
+
+    color: #ffffff;
+
+    transform: translateY(-1px);
+}
+
+
+.quantity-value {
+    min-width: 30px;
+
+    text-align: center;
+
+    color: #222222;
+
+    font-size: 15px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   EMPTY MENU
+   ========================================================= */
+
+.empty-menu {
+    width: 90%;
+    max-width: 600px;
+
+    margin: 60px auto;
+
+    padding: 50px 30px;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border-radius: 16px;
+
+    box-shadow:
+        7px 7px 18px rgba(0, 0, 0, 0.08),
+        -5px -5px 15px rgba(255, 255, 255, 0.95);
+}
+
+
+.empty-menu-icon {
+    margin-bottom: 15px;
+
+    font-size: 45px;
+}
+
+
+.empty-menu h2 {
+    margin: 0 0 10px;
+
+    color: #222222;
+
+    font-size: 24px;
+}
+
+
+.empty-menu p {
+    margin: 0;
+
+    color: #777777;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   BACK TO RESTAURANTS
+   ========================================================= */
+
+.back-restaurants {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 0 auto 25px;
+}
+
+
+.back-restaurants a {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    color: #555555;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.back-restaurants a:hover {
+    color: #ff5200;
+
+    transform: translateX(-2px);
+
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 950px) {
+
+    .menu-container {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 22px;
+    }
+
+    .menu-image-wrapper {
+        height: 200px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .menu-page {
+        padding-top: 30px;
+    }
+
+    .menu-hero {
+        width: 92%;
+
+        margin-bottom: 28px;
+    }
+
+    .menu-hero h1 {
+        font-size: 28px;
+    }
+
+    .menu-hero p {
+        font-size: 14px;
+    }
+
+    .menu-container {
+        width: 92%;
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .menu-image-wrapper {
+        height: 220px;
+    }
+
+    .menu-content {
+        padding: 17px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    .menu-hero h1 {
+        font-size: 25px;
+    }
+
+    .menu-image-wrapper {
+        height: 200px;
+    }
+
+    .menu-name {
+        font-size: 18px;
+    }
+
+    .add-cart-btn {
+        width: 88%;
+    }
+
+    .menu-quantity {
+        width: 88%;
+    }
+}

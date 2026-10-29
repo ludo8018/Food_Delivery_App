@@ -1,0 +1,26 @@
+
+# Eclipse IDE files
+.settings/
+.classpath
+.project
+
+# Compiled Java files
+build/
+bin/
+*.class
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak

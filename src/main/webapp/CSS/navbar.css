@@ -1,0 +1,260 @@
+/* Remove the white background behind the navbar */
+html,
+body {
+    background: #fff4df !important;
+}
+
+/* Keep the navbar floating above the page background */
+.navbar {
+    background: #ffffff !important;
+    position: relative;
+    z-index: 1000;
+}
+/* LUDO NAVBAR - FINAL COLOR FIX */
+.navbar {
+    background: #ffffff !important;
+    border: 1px solid #f1f1f1;
+    border-radius: 26px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.navbar-logo a {
+    color: #ff501b !important;
+}
+
+.navbar-links .nav-link {
+    color: #333333 !important;
+}
+
+.navbar-links .nav-link:hover {
+    color: #ff501b !important;
+}
+
+.navbar-links .login-link {
+    background: #ff501b !important;
+    color: #ffffff !important;
+}
+/* =========================================
+   LUDO MAIN NAVBAR
+========================================= */
+
+.navbar {
+    width: calc(100% - 52px);
+    max-width: none;
+    min-height: 92px;
+    margin: 16px 26px 0;
+
+    padding: 0 4.8%;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    background: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 26px;
+
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    position: relative;
+    z-index: 1000;
+}
+
+/* LOGO */
+
+.navbar-logo {
+    flex-shrink: 0;
+}
+
+.navbar-logo a {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    color: #ff4f0b;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    text-decoration: none;
+}
+
+.navbar-logo a::before {
+    content: "⚄";
+    width: 44px;
+    height: 44px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+    background: #ff501b;
+    border-radius: 14px;
+    font-size: 25px;
+    letter-spacing: 0;
+    box-shadow: 0 5px 12px rgba(255, 80, 27, 0.2);
+}
+
+/* NAVIGATION LINKS */
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 40px;
+}
+
+.navbar-links .nav-link {
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+}
+
+.navbar-links .nav-link:hover {
+    color: #ff501b;
+}
+
+/* LOGIN BUTTON */
+
+.navbar-links .login-link {
+    min-width: 95px;
+    padding: 15px 24px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+
+    color: #fff;
+    background: #ff4f0b;
+    border-radius: 12px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+
+    box-shadow: 0 5px 14px rgba(255, 79, 11, 0.18);
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.navbar-links .login-link:hover {
+    background: #e94300;
+    transform: translateY(-1px);
+}
+
+/* PROFILE */
+
+.navbar-links .profile-link {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #5b358c;
+    background: #fff1e9;
+    border: 1px solid #ffe0ce;
+    border-radius: 50%;
+
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.navbar-links .profile-link:hover {
+    background: #ffe2d2;
+    transform: translateY(-1px);
+}
+
+.navbar-links .profile-icon {
+    font-size: 23px;
+    line-height: 1;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+    .navbar {
+        width: calc(100% - 32px);
+        min-height: 80px;
+        margin: 12px 16px 0;
+        padding: 14px 24px;
+        border-radius: 22px;
+    }
+
+    .navbar-logo a {
+        font-size: 30px;
+    }
+
+    .navbar-links {
+        gap: 24px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    .navbar {
+        width: calc(100% - 20px);
+        margin: 10px 10px 0;
+        padding: 14px 16px;
+        gap: 16px;
+        border-radius: 18px;
+        flex-wrap: wrap;
+    }
+
+    .navbar-logo a {
+        gap: 8px;
+        font-size: 27px;
+    }
+
+    .navbar-logo a::before {
+        width: 38px;
+        height: 38px;
+        border-radius: 11px;
+        font-size: 22px;
+    }
+
+    .navbar-links {
+        width: 100%;
+        justify-content: space-between;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .navbar-links .nav-link {
+        font-size: 14px;
+    }
+
+    .navbar-links .login-link {
+        min-width: auto;
+        padding: 11px 16px;
+        font-size: 14px;
+    }
+
+    .navbar-links .profile-link {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* VERY SMALL MOBILE */
+
+@media (max-width: 360px) {
+    .navbar-links {
+        gap: 10px;
+    }
+
+    .navbar-links .nav-link {
+        font-size: 13px;
+    }
+}
